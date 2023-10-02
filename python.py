@@ -1,5 +1,4 @@
-
-#!
+#1
 user_input = input()
 created_tuple = tuple(user_input)
 print(created_tuple)
@@ -67,38 +66,38 @@ difference_set = set_A.symmetric_difference(set_B)
 print(difference_set)
 
 #8
-set_A = {1,2,3,4,5}
-set_B = {5,7,8,9,2,10}
-set_A.difference_update(set_B)
-print(set_A)
+set_A_1 = {1,2,3,4,5}
+set_B_1 = {5,7,8,9,2,10}
+set_A_1.difference_update(set_B_1)
+print(set_A_1)
 
 #9
-set_A = {1, 2, 3, 4, 7}
-set_B = {8, 7, 9, 4, 2, 0, 10}
-set_C = {4, 0, 1}
+set_A_mad = {1, 2, 3, 4, 7}
+set_B_mad = {8, 7, 9, 4, 2, 0, 10}
+set_C_Mad = {4, 0, 1}
 for element in set_C:
-    if element in set_A:
-        set_A.remove(element)
-        set_B.add(element)
-print(set_A)
-print(set_B)
+    if element in set_A_mad:
+        set_A_mad.remove(element)
+        set_B_mad.add(element)
+print(set_A_mad)
+print(set_B_mad)
 
 #10
 from itertools import combinations
-A = {1,2,3,4,5,6}
-n = 3
-m = 5
-combinations_set = list(combinations(A, n))
-selected_combinations = combinations_set[:m]
+A1 = {1,2,3,4,5,6}
+n1 = 3
+m1 = 5
+combinations_set = list(combinations(A1, n1))
+selected_combinations = combinations_set[:m1]
 result_list = [set(comb) for comb in selected_combinations]
 print(result_list)
 
 #11
 from itertools import groupby
-cars_list = [('BMW', 'X6'), ('Toyota', 'Yaris'),
+madi_list = [('BMW', 'X6'), ('Toyota', 'Yaris'),
              ('Fiat', '500'), ('Fiat', 'Panda'), ('Toyota', 'Camry 30')]
-cars_list.sort(key=lambda x: x[0])
-for key, group in groupby(cars_list, key=lambda x: x[0]):
+madi_list.sort(key=lambda x: x[0])
+for key, group in groupby(madi_list, key=lambda x: x[0]):
     print(f"{key} {len(list(group))}")
     for car in group:
         print(f"- {car[1]}")
